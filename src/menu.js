@@ -1,8 +1,8 @@
 import Item1 from './images/ancient-brontodon.jpg';
-// import item2 from './Goring-Ceratops.jpg';
-import Item3 from './src/images/Skittering-Heartstopper.jpg';
-// import item4 from './Sun-Crowned-Hunters.png';
-// import item5 from './Wind-Strider.jpg';
+import Item2 from './images/Goring-Ceratops.jpg';
+import Item3 from './images/Skittering-Heartstopper.jpg';
+import Item4 from './images/Sun-Crowned-Hunters.png';
+import Item5 from './images/Wind-Strider.jpg';
 
 export default function menuTab() {
     const contentGrbbr = document.querySelector('#content');
@@ -35,7 +35,7 @@ export default function menuTab() {
     //item 2
     menuArrCrtr[1].children[0].children[0].innerText = "Goring Ceratops Feast";
     menuArrCrtr[1].children[0].children[1].innerText = "A culinary adventure as epic as a battle in the Magic: The Gathering Arena, yep that's our Goring Ceratops Feast. This extraordinary dish takes inspiration from the fearsome Goring Ceratops, offering a taste of its power and majesty right at your table.";
-    menuArrCrtr[1].children[1].src = '/home/joe/repos/restaurant-page/src/images/Goring-Ceratops.jpg';
+    menuArrCrtr[1].children[1].src = Item2;
 
     //item 3
     menuArrCrtr[2].children[0].children[0].innerText = "Skittering Heartstopper Salad";
@@ -45,11 +45,11 @@ export default function menuTab() {
     //item 4
     menuArrCrtr[3].children[0].children[0].innerText = "Sun-Crowned Hunters Flame-Grilled Chicken";
     menuArrCrtr[3].children[0].children[1].innerText = "Get ready to savor the untamed flavors of the wild with our Sun-Crowned Hunters Flame-Grilled Chicken. This extraordinary dish draws inspiration from the majestic and fiery essence of the Sun-Crowned Hunters, delivering a truly primal dining experience.";
-    menuArrCrtr[3].children[1].src = './images/Sun-Crowned-Hunters.png';
+    menuArrCrtr[3].children[1].src = Item4;
 
     //item 5
     menuArrCrtr[4].children[0].children[0].innerText = "Wind Strider's Delight";
     menuArrCrtr[4].children[0].children[1].innerText = "Embark on a whimsical journey through the skies with our Wind Strider's Delight. This enchanting dessert captures the grace and elegance of the mystical Merfolk, offering a sweet and delightful experience for your palate.";
-    menuArrCrtr[4].children[1].src = './Wind-Strider.jpg';
+    menuArrCrtr[4].children[1].src = Item5;
   }
 

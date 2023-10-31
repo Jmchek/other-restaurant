@@ -1,6 +1,6 @@
-import item1 from './Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg';
-import item2 from './Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg';
-import item3 from './Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png';
+import item1 from './images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg';
+import item2 from './images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg';
+import item3 from './images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png';
 
 export default function contactTab() {
     const contentGrbbr = document.querySelector('#content');

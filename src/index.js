@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import './ghalta.css';
 import loadMe from './page-load.js';
-// import menuTab from './menu.js';
-// import contactTab from './contact.js';
+import menuTab from './menu.js';
+import contactTab from './contact.js';
 
 function openTab() {
 

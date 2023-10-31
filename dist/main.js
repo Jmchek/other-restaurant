@@ -140,6 +140,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ contactTab)\n/* harmony export */ });\n/* harmony import */ var _images_Huatli_Heart_of_the_Sun_War_of_the_Spark_Art_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg */ \"./src/images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg\");\n/* harmony import */ var _images_Angrath_Minotaur_Pirate_Rivals_of_Ixalan_MtG_Art_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg */ \"./src/images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg\");\n/* harmony import */ var _images_Vraska_Scheming_Gorgon_Rivals_of_Ixalan_MtG_Art_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png */ \"./src/images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png\");\n\n\n\n\nfunction contactTab() {\n    const contentGrbbr = document.querySelector('#content');\n    const menuHeaderCrtr = document.createElement('h2');\n    const menuArrCrtr = [];\n\n    menuHeaderCrtr.id = \"resHeader\";\n    menuHeaderCrtr.innerText = \"Contact\";\n\n    contentGrbbr.appendChild(menuHeaderCrtr);\n\n    for (let i = 0; i < 3; i++){\n      menuArrCrtr.push(document.createElement('div'));\n      contentGrbbr.appendChild(menuArrCrtr[i]).classList = \"menuItems\";\n    }\n\n    const menuItemGrbbr = document.querySelectorAll(\".menuItems\");\n    menuItemGrbbr.forEach( e => {\n      let elementHolder = document.createElement('div');\n      e.appendChild(elementHolder).appendChild(document.createElement('h2'));\n      elementHolder.appendChild(document.createElement('p'));\n      e.appendChild(document.createElement('img')); \n    });\n\n    //item 1\n    menuArrCrtr[0].children[0].children[0].innerText = \"Huatli, the Sun's Heart\";\n    menuArrCrtr[0].children[0].children[1].innerText = \"Chef \\n 555-555-5555 \\n dinosrule@ixalan.com\";\n    menuArrCrtr[0].children[1].src = _images_Huatli_Heart_of_the_Sun_War_of_the_Spark_Art_jpg__WEBPACK_IMPORTED_MODULE_0__;\n\n    //item 2\n    menuArrCrtr[1].children[0].children[0].innerText = \"Angrath, the Flame-Chained\";\n    menuArrCrtr[1].children[0].children[1].innerText = \"Manager \\n 555-555-5555 \\n discardintogy@ixalan.com\";\n    menuArrCrtr[1].children[1].src = _images_Angrath_Minotaur_Pirate_Rivals_of_Ixalan_MtG_Art_jpg__WEBPACK_IMPORTED_MODULE_1__;\n\n    //item 3\n    menuArrCrtr[2].children[0].children[0].innerText = \"Vraska, Golgari Queen\";\n    menuArrCrtr[2].children[0].children[1].innerText = \"Hostess \\n 555-555-5555 \\n niceperm@ixalan.com\";\n    menuArrCrtr[2].children[1].src = _images_Vraska_Scheming_Gorgon_Rivals_of_Ixalan_MtG_Art_png__WEBPACK_IMPORTED_MODULE_2__;\n}\n\n//# sourceURL=webpack://other-restaurant/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -147,7 +158,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ghalta_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ghalta.css */ \"./src/ghalta.css\");\n/* harmony import */ var _page_load_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page-load.js */ \"./src/page-load.js\");\n\n\n\n// import menuTab from './menu.js';\n// import contactTab from './contact.js';\n\nfunction openTab() {\n\n  const contentGrabber = document.querySelector('#content');\n  const bodyGrbbr = document.querySelector('body');\n  const tabGroupCrtr = document.createElement('div');\n  const homeTabCrtr = document.createElement('button');\n  const menuTabCrtr = document.createElement('button');\n  const contactTabCrtr = document.createElement('button');\n\n  tabGroupCrtr.classList.add(\"tab\");\n  homeTabCrtr.classList.add('tabGroup');\n  menuTabCrtr.classList.add('tabGroup');\n  contactTabCrtr.classList.add('tabGroup');\n\n  bodyGrbbr.insertBefore(tabGroupCrtr, contentGrabber);\n  tabGroupCrtr.appendChild(homeTabCrtr);\n  tabGroupCrtr.appendChild(menuTabCrtr);\n  tabGroupCrtr.appendChild(contactTabCrtr);\n\n  homeTabCrtr.innerText = \"Home\";\n  menuTabCrtr.innerText = \"Menu\";\n  contactTabCrtr.innerText = \"Contact\";\n\n\n  const tabGroupGrbbr = document.querySelectorAll('.tabGroup');\n\n  tabGroupGrbbr.forEach((e, index) => {\n    e.addEventListener('click', f => {\n      if (index == 0) {\n        contentGrabber.innerHTML = \"\";\n        (0,_page_load_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n      } else if (index == 1) {\n        contentGrabber.innerHTML = \"\";\n        menuTab();\n      } else if (index == 2) {\n        contentGrabber.innerHTML = \"\";\n        contactTab();\n      }\n    });\n  });\n\n  }\n\n  \n  (0,_page_load_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  openTab();\n\n//# sourceURL=webpack://other-restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ghalta_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ghalta.css */ \"./src/ghalta.css\");\n/* harmony import */ var _page_load_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page-load.js */ \"./src/page-load.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\n\nfunction openTab() {\n\n  const contentGrabber = document.querySelector('#content');\n  const bodyGrbbr = document.querySelector('body');\n  const tabGroupCrtr = document.createElement('div');\n  const homeTabCrtr = document.createElement('button');\n  const menuTabCrtr = document.createElement('button');\n  const contactTabCrtr = document.createElement('button');\n\n  tabGroupCrtr.classList.add(\"tab\");\n  homeTabCrtr.classList.add('tabGroup');\n  menuTabCrtr.classList.add('tabGroup');\n  contactTabCrtr.classList.add('tabGroup');\n\n  bodyGrbbr.insertBefore(tabGroupCrtr, contentGrabber);\n  tabGroupCrtr.appendChild(homeTabCrtr);\n  tabGroupCrtr.appendChild(menuTabCrtr);\n  tabGroupCrtr.appendChild(contactTabCrtr);\n\n  homeTabCrtr.innerText = \"Home\";\n  menuTabCrtr.innerText = \"Menu\";\n  contactTabCrtr.innerText = \"Contact\";\n\n\n  const tabGroupGrbbr = document.querySelectorAll('.tabGroup');\n\n  tabGroupGrbbr.forEach((e, index) => {\n    e.addEventListener('click', f => {\n      if (index == 0) {\n        contentGrabber.innerHTML = \"\";\n        (0,_page_load_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n      } else if (index == 1) {\n        contentGrabber.innerHTML = \"\";\n        (0,_menu_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n      } else if (index == 2) {\n        contentGrabber.innerHTML = \"\";\n        (0,_contact_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n      }\n    });\n  });\n\n  }\n\n  \n  (0,_page_load_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  openTab();\n\n//# sourceURL=webpack://other-restaurant/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ menuTab)\n/* harmony export */ });\n/* harmony import */ var _images_ancient_brontodon_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/ancient-brontodon.jpg */ \"./src/images/ancient-brontodon.jpg\");\n/* harmony import */ var _images_Goring_Ceratops_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/Goring-Ceratops.jpg */ \"./src/images/Goring-Ceratops.jpg\");\n/* harmony import */ var _images_Skittering_Heartstopper_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/Skittering-Heartstopper.jpg */ \"./src/images/Skittering-Heartstopper.jpg\");\n/* harmony import */ var _images_Sun_Crowned_Hunters_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/Sun-Crowned-Hunters.png */ \"./src/images/Sun-Crowned-Hunters.png\");\n/* harmony import */ var _images_Wind_Strider_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/Wind-Strider.jpg */ \"./src/images/Wind-Strider.jpg\");\n\n\n\n\n\n\nfunction menuTab() {\n    const contentGrbbr = document.querySelector('#content');\n    const menuHeaderCrtr = document.createElement('h2');\n    const menuArrCrtr = [];\n\n    menuHeaderCrtr.id = \"resHeader\";\n    menuHeaderCrtr.innerText = \"Menu\";\n\n    contentGrbbr.appendChild(menuHeaderCrtr);\n\n    for (let i = 0; i < 5; i++){\n      menuArrCrtr.push(document.createElement('div'));\n      contentGrbbr.appendChild(menuArrCrtr[i]).classList = \"menuItems\";\n    }\n\n    const menuItemGrbbr = document.querySelectorAll(\".menuItems\");\n    menuItemGrbbr.forEach( e => {\n      let elementHolder = document.createElement('div');\n      e.appendChild(elementHolder).appendChild(document.createElement('h2'));\n      elementHolder.appendChild(document.createElement('p'));\n      e.appendChild(document.createElement('img')); \n    });\n\n    //item 1\n    menuArrCrtr[0].children[0].children[0].innerText = \"Ancient Brontodon Steak\";\n    menuArrCrtr[0].children[0].children[1].innerText = \"Prepare to embark on a prehistoric culinary adventure with our Ancient Brontodon Steak. This indulgent dish pays homage to the colossal size and strength of the mighty brontodon, bringing a taste of the ancient world to your plate.\";\n    menuArrCrtr[0].children[1].src = _images_ancient_brontodon_jpg__WEBPACK_IMPORTED_MODULE_0__;\n\n    //item 2\n    menuArrCrtr[1].children[0].children[0].innerText = \"Goring Ceratops Feast\";\n    menuArrCrtr[1].children[0].children[1].innerText = \"A culinary adventure as epic as a battle in the Magic: The Gathering Arena, yep that's our Goring Ceratops Feast. This extraordinary dish takes inspiration from the fearsome Goring Ceratops, offering a taste of its power and majesty right at your table.\";\n    menuArrCrtr[1].children[1].src = _images_Goring_Ceratops_jpg__WEBPACK_IMPORTED_MODULE_1__;\n\n    //item 3\n    menuArrCrtr[2].children[0].children[0].innerText = \"Skittering Heartstopper Salad\";\n    menuArrCrtr[2].children[0].children[1].innerText = \"Experience a culinary adventure that captures the essence of excitement and danger with our Skittering Heartstopper Salad. This extraordinary dish takes inspiration from the stealthy and deadly Insect creature, offering a unique and flavorful dining experience.\";\n    menuArrCrtr[2].children[1].src = _images_Skittering_Heartstopper_jpg__WEBPACK_IMPORTED_MODULE_2__;\n\n    //item 4\n    menuArrCrtr[3].children[0].children[0].innerText = \"Sun-Crowned Hunters Flame-Grilled Chicken\";\n    menuArrCrtr[3].children[0].children[1].innerText = \"Get ready to savor the untamed flavors of the wild with our Sun-Crowned Hunters Flame-Grilled Chicken. This extraordinary dish draws inspiration from the majestic and fiery essence of the Sun-Crowned Hunters, delivering a truly primal dining experience.\";\n    menuArrCrtr[3].children[1].src = _images_Sun_Crowned_Hunters_png__WEBPACK_IMPORTED_MODULE_3__;\n\n    //item 5\n    menuArrCrtr[4].children[0].children[0].innerText = \"Wind Strider's Delight\";\n    menuArrCrtr[4].children[0].children[1].innerText = \"Embark on a whimsical journey through the skies with our Wind Strider's Delight. This enchanting dessert captures the grace and elegance of the mystical Merfolk, offering a sweet and delightful experience for your palate.\";\n    menuArrCrtr[4].children[1].src = _images_Wind_Strider_jpg__WEBPACK_IMPORTED_MODULE_4__;\n  }\n\n\n\n//# sourceURL=webpack://other-restaurant/./src/menu.js?");
 
 /***/ }),
 
@@ -162,6 +184,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg":
+/*!*************************************************************************!*\
+  !*** ./src/images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c61b5a556582cc5d3a25.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Angrath-Minotaur-Pirate-Rivals-of-Ixalan-MtG-Art.jpg?");
+
+/***/ }),
+
 /***/ "./src/images/Ghalta.jpg":
 /*!*******************************!*\
   !*** ./src/images/Ghalta.jpg ***!
@@ -170,6 +203,83 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"cdab3cb65f8c3ee100a9.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Ghalta.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/Goring-Ceratops.jpg":
+/*!****************************************!*\
+  !*** ./src/images/Goring-Ceratops.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e1e6dff3b61a9c30aaa6.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Goring-Ceratops.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg":
+/*!*********************************************************************!*\
+  !*** ./src/images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg ***!
+  \*********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"49109b243bcbce6246da.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Huatli-Heart-of-the-Sun-War-of-the-Spark-Art.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/Skittering-Heartstopper.jpg":
+/*!************************************************!*\
+  !*** ./src/images/Skittering-Heartstopper.jpg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2303d48ec9c4934db1d8.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Skittering-Heartstopper.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/Sun-Crowned-Hunters.png":
+/*!********************************************!*\
+  !*** ./src/images/Sun-Crowned-Hunters.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4a86ebbc343e81f883de.png\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Sun-Crowned-Hunters.png?");
+
+/***/ }),
+
+/***/ "./src/images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png":
+/*!************************************************************************!*\
+  !*** ./src/images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png ***!
+  \************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"44c0a589d825ac4cfd69.png\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Vraska-Scheming-Gorgon-Rivals-of-Ixalan-MtG-Art.png?");
+
+/***/ }),
+
+/***/ "./src/images/Wind-Strider.jpg":
+/*!*************************************!*\
+  !*** ./src/images/Wind-Strider.jpg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"743113fb78a28b2525e7.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/Wind-Strider.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/ancient-brontodon.jpg":
+/*!******************************************!*\
+  !*** ./src/images/ancient-brontodon.jpg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5556bc28807078cc0b5c.jpg\";\n\n//# sourceURL=webpack://other-restaurant/./src/images/ancient-brontodon.jpg?");
 
 /***/ }),
 
