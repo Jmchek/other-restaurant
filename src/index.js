@@ -1,29 +1,52 @@
 import _ from 'lodash';
-import './style.css';
-import Ghalta from './ghalta.jpeg';
-import Icon from './icon.jpg';
-import printMe from './print.js';
+import './ghalta.css';
+import loadMe from './page-load.js';
+// import menuTab from './menu.js';
+// import contactTab from './contact.js';
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
+function openTab() {
 
-    btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
+  const contentGrabber = document.querySelector('#content');
+  const bodyGrbbr = document.querySelector('body');
+  const tabGroupCrtr = document.createElement('div');
+  const homeTabCrtr = document.createElement('button');
+  const menuTabCrtr = document.createElement('button');
+  const contactTabCrtr = document.createElement('button');
 
-  element.appendChild(btn);
+  tabGroupCrtr.classList.add("tab");
+  homeTabCrtr.classList.add('tabGroup');
+  menuTabCrtr.classList.add('tabGroup');
+  contactTabCrtr.classList.add('tabGroup');
 
-    // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+  bodyGrbbr.insertBefore(tabGroupCrtr, contentGrabber);
+  tabGroupCrtr.appendChild(homeTabCrtr);
+  tabGroupCrtr.appendChild(menuTabCrtr);
+  tabGroupCrtr.appendChild(contactTabCrtr);
 
-  element.appendChild(myIcon);
-  
-    return element;
+  homeTabCrtr.innerText = "Home";
+  menuTabCrtr.innerText = "Menu";
+  contactTabCrtr.innerText = "Contact";
+
+
+  const tabGroupGrbbr = document.querySelectorAll('.tabGroup');
+
+  tabGroupGrbbr.forEach((e, index) => {
+    e.addEventListener('click', f => {
+      if (index == 0) {
+        contentGrabber.innerHTML = "";
+        loadMe();
+      } else if (index == 1) {
+        contentGrabber.innerHTML = "";
+        menuTab();
+      } else if (index == 2) {
+        contentGrabber.innerHTML = "";
+        contactTab();
+      }
+    });
+  });
+
   }
+
   
-  document.body.appendChild(component());
+  loadMe();
+  openTab();

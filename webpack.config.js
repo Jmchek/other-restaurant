@@ -2,17 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Ghalta\'s Primal Hunger',
+      template: './src/template.html',
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
